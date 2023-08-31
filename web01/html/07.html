@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>自动播放视频背景</title>
+  <style>
+    /* CSS样式 */
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    #video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://www.jq22.com/jquery/bootstrap-3.3.4.css">
+<link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.6.0.css">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/aos.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet"> main style 
+
+
+
+
+
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+ 
+<script>
+    L2Dwidget.init({
+        "model": {
+            "jsonPath": "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+            "scale": 1
+        },
+        "display": {
+            "position": "left",
+            "width": 150,
+            "height": 300,
+            "hOffset": 0,
+            "vOffset": -20
+        },
+        "mobile": {
+            "show": true,
+            "scale": 0.5
+        },
+        "react": {
+            "opacityDefault": 0.7,
+            "opacityOnHover": 0.2
+        }
+    });
+</script>
+  <div id="video-background">
+    <video autoplay muted loop>
+      <source src="v3423423webm.webm" type="video/mp4">
+      <!-- 提供其他视频格式的备用源 -->
+    </video>
+  </div>
+
+  <script>
+    // JavaScript代码
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var video = document.querySelector("#video-background video");
+      video.addEventListener("loadedmetadata", function() {
+        adjustVideoSize();
+      });
+
+      function adjustVideoSize() {
+        var videoWidth = video.videoWidth;
+        var videoHeight = video.videoHeight;
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var windowRatio = windowWidth / windowHeight;
+        var videoRatio = videoWidth / videoHeight;
+
+        if (windowRatio > videoRatio) {
+          video.style.width = "100%";
+          video.style.height = "auto";
+        } else {
+          video.style.width = "auto";
+          video.style.height = "100%";
+        }
+      }
+
+      window.addEventListener("resize", function() {
+        adjustVideoSize();
+      });
+    });
+  </script>
+  <div id="animatedModal" class="popup-modal">
+    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+    <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
+    <div class="clearfix"></div>
+    <div class="modal-content">
+        <div class="container">
+            <div class="portfolio-padding">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>香港<br /> Hong Kong</h2>
+                    <div class="h-50"></div>
+                    <p>漫步在香港的繁华街头，仿佛融入了一个快节奏的都市交响曲。高耸入云的摩天大楼，灯火辉煌的购物商场，熙熙攘攘的人潮，构成了这个国际大都市的独特风景。无论是热闹的中环、铜锣湾还是浪漫的九龙城，每一个角落都流淌着忙碌而充实的生活节奏，将你带入一个繁忙又迷人的城市世界。</p>
+                    <p>香港不仅是一个商业金融中心，也是一个文化交汇的地方。这里汇聚了来自世界各地的人们和他们的文化，形成了多元化的社会和独特的风貌。艺术展览、电影节、音乐会等文化活动丰富多样，让你在这个城市中感受到艺术的力量和创造的激情。香港的文化融合让人们可以尽情地领略到东西方文化的碰撞与交流，打开了一扇通向世界的文化之窗。</p>
+                    <br />
+                   
+                    <br />
+                    <br />
+                    <p>香港的美食更是让人垂涎欲滴。这个城市拥有各式各样的美食，从传统的粤菜、港式茶餐厅到国际化的西餐、日本料理，应有尽有。街头小吃更是令人难以抵挡，叫人垂涎三尺的烧腊、鱼蛋、糖葱蘸饼等美味让你流连忘返。无论是在繁忙的街头巷尾还是隐匿的小巷里，香港的美食文化总能给你带来一场味蕾的盛宴。</p>
+                    <p>香港，一个充满活力和魅力的城市，它以其独特的文化、美食和景观吸引着世界各地的人们。无论你是来商务洽谈、探索文化、品味美食还是享受自然，香港都会给你带来一个令人难忘的体验，让你流连忘返。这个东方明珠将用它独特的魅力和活力，深深地烙印在你的记忆中。</p>
+                    <br />
+                    <br /> </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
